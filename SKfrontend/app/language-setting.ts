@@ -1,20 +1,10 @@
-const language = {
-    bg: 1,
-    eng: 2
-}
+export let lang: "bg" | "eng"
 
-var setting = language.bg;
+ lang = "bg";
 
-export function ChangeLanguage(){
-    if(setting === language.bg)
-        setting = language.eng
-    else
-        setting = language.bg;
+export function Switch(){
+    return lang = lang === "eng" ? "bg" : "eng";  
 }
-export const perm = setting;
-export function Handler(){
-    if(perm === language.bg)
-        return "placeholdersBg"
-    else
-        return "placeholders.Eng"
+export function current(){
+    return lang;
 }
