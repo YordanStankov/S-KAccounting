@@ -1,10 +1,11 @@
 import Link from "next/link";
-import styles from "./home.module.css";
+import ui from "./ui.module.css";
+import styles from "./site.module.css";
 
 export default function SiteFooter() {
   return (
     <footer className={styles.footer}>
-      <div className={`${styles.inner} ${styles.footerGrid}`}>
+      <div className={`${ui.inner} ${styles.footerGrid}`}>
         <div>
           <h3>{"Services"}</h3>
           <ul>
@@ -29,6 +30,7 @@ export default function SiteFooter() {
         <div>
           <h3>{"Contacts"}</h3>
           <ul>
+            <li>{"Sofia, Geo Milev, Hemus 62 - 64"}</li>
             <li>
               <a href="tel:+359881234567">{"+359 88 123 4567"}</a>
             </li>

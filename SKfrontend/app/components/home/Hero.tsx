@@ -1,3 +1,4 @@
+import ui from "../site/ui.module.css";
 import styles from "./home.module.css";
 
 export default function Hero() {
@@ -5,9 +6,9 @@ export default function Hero() {
     <section
       className={styles.hero}
       role="img"
-      aria-label="Accountant's desk with financial documents"
+      aria-label="Hand near a laptop on an office desk"
     >
-      <div className={`${styles.inner} ${styles.heroInner}`}>
+      <div className={`${ui.inner} ${styles.heroInner}`}>
         <h1 className={styles.heroTitle}>{"Accounting services"}</h1>
       </div>
     </section>

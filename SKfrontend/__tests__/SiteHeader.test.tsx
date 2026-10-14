@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
-import SiteHeader from "@/app/components/home/SiteHeader";
+import SiteHeader from "@/app/components/site/SiteHeader";
 
 describe("SiteHeader", () => {
   it("renders the logo and main navigation links", () => {

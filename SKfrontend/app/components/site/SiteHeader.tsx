@@ -1,10 +1,11 @@
 import Link from "next/link";
-import styles from "./home.module.css";
+import ui from "./ui.module.css";
+import styles from "./site.module.css";
 
 export default function SiteHeader() {
   return (
     <header className={styles.header}>
-      <div className={`${styles.inner} ${styles.headerInner}`}>
+      <div className={`${ui.inner} ${styles.headerInner}`}>
         <Link href="/" className={styles.logo}>
           <span className={styles.logoMark}>{"S&K"}</span>
           <span className={styles.logoText}>{"Accounting"}</span>

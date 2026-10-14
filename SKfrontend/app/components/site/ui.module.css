@@ -1,0 +1,111 @@
+.inner {
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 4.5rem 0;
+    background: #ffffff;
+}
+
+.sectionAlt {
+    padding: 4.5rem 0;
+    background: var(--surface);
+    border-top: 1px solid var(--line);
+}
+
+.sectionTitle {
+    margin: 0 0 2.5rem;
+    color: var(--navy);
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 700;
+    text-align: center;
+}
+
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 2.25rem 2rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--accent);
+    border-radius: 10px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(20, 35, 60, 0.1);
+}
+
+.card h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.card p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.cardIcon {
+    display: inline-grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--accent);
+}
+
+.contactLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--text);
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+.contactLink svg {
+    flex-shrink: 0;
+    color: var(--accent-dark);
+}
+
+a.contactLink:hover {
+    color: var(--accent-dark);
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 6px;
+    background: var(--accent);
+    color: var(--navy);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.button:hover {
+    background: var(--accent-dark);
+}

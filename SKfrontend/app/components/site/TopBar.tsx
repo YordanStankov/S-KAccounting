@@ -1,10 +1,11 @@
-import { Phone, Mail, Clock } from "lucide-react";
-import styles from "./home.module.css";
+import { Phone, Mail, Clock, MapPin } from "lucide-react";
+import ui from "./ui.module.css";
+import styles from "./site.module.css";
 
 export default function TopBar() {
   return (
     <div className={styles.topBar} data-testid="top-bar">
-      <div className={styles.inner}>
+      <div className={ui.inner}>
         <ul className={styles.topBarList}>
           <li>
             <a href="tel:+359881234567">
@@ -17,6 +18,10 @@ export default function TopBar() {
               <Mail size={14} aria-hidden="true" />
               <span>{"office@sk-accounting.bg"}</span>
             </a>
+          </li>
+          <li>
+            <MapPin size={14} aria-hidden="true" />
+            <span>{"Sofia, Geo Milev, Hemus 62 - 64"}</span>
           </li>
           <li>
             <Clock size={14} aria-hidden="true" />

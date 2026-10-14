@@ -1,16 +1,16 @@
 import { Calculator, Landmark } from "lucide-react";
-import styles from "./home.module.css";
+import ui from "../site/ui.module.css";
 
 export default function Services() {
   return (
-    <section className={styles.services} aria-labelledby="services-title">
-      <div className={styles.inner}>
-        <h2 id="services-title" className={styles.sectionTitle}>
+    <section className={ui.section} aria-labelledby="services-title">
+      <div className={ui.inner}>
+        <h2 id="services-title" className={ui.sectionTitle}>
           {"What services can we offer you?"}
         </h2>
-        <ul className={styles.serviceList}>
-          <li className={styles.serviceCard}>
-            <span className={styles.serviceIcon}>
+        <ul className={ui.cardGrid}>
+          <li className={ui.card}>
+            <span className={ui.cardIcon}>
               <Calculator size={28} aria-hidden="true" />
             </span>
             <h3>{"Accounting services - firms and persons"}</h3>
@@ -20,8 +20,8 @@ export default function Services() {
               }
             </p>
           </li>
-          <li className={styles.serviceCard}>
-            <span className={styles.serviceIcon}>
+          <li className={ui.card}>
+            <span className={ui.cardIcon}>
               <Landmark size={28} aria-hidden="true" />
             </span>
             <h3>{"Taxes and insurance"}</h3>
