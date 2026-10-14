@@ -6,7 +6,7 @@ import styles from "./page.module.css";
 function OfficeDetails() {
   return (
     <section className={styles.panel} aria-labelledby="office-title">
-      <h2 id="office-title">{"Our office"}</h2>
+      <h2 id="office-title">{"Contact details"}</h2>
       <ul className={styles.details}>
         <li className={ui.contactLink}>
           <MapPin size={18} aria-hidden="true" />
@@ -72,7 +72,7 @@ function OfficeMap() {
     <section className={ui.sectionAlt} aria-labelledby="map-title">
       <div className={ui.inner}>
         <h2 id="map-title" className={ui.sectionTitle}>
-          {"Find us"}
+          {"Our office"}
         </h2>
         <div className={styles.mapFrame}>
           <iframe
