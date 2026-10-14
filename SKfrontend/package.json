@@ -12,9 +12,13 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "i18next": "^26.4.4",
+    "i18next-browser-languagedetector": "^8.2.1",
+    "lucide-react": "^1.55.0",
     "next": "16.3.5",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "react-i18next": "^17.0.16"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -23,6 +27,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
+    "i18next-cli": "^1.75.3",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

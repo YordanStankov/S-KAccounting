@@ -72,6 +72,9 @@
 }
 
 .companyCard a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-size: 1.05rem;
     color: #9ca3af;
     text-decoration: none;
@@ -137,6 +140,9 @@
 }
 
 .professionalItem a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     font-size: 1.05rem;
     color: #9ca3af;
     text-decoration: none;
