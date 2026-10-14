@@ -13,7 +13,7 @@ function Intro() {
           <h2 id="who-we-are">{"Accounting you can rely on, year after year"}</h2>
           <p>
             {
-              "S and K Accounting is an accounting practice in Sofia that looks after the books, taxes and insurance of companies, sole traders and private persons."
+              "S and K Accounting is an accounting practice in Sofia that looks after the books, taxes and insurance of companies, sole traders and individual clients."
             }
           </p>
           <p>
@@ -26,7 +26,7 @@ function Intro() {
               <span className={styles.checkIcon}>
                 <Check size={14} aria-hidden="true" />
               </span>
-              {"Bookkeeping for firms and persons"}
+              {"Bookkeeping for firms and individual clients"}
             </li>
             <li>
               <span className={styles.checkIcon}>
@@ -222,7 +222,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About us"
-        description="Twenty-five years of accounting, taxes and insurance for firms and persons."
+        description="Twenty-five years of accounting, taxes and insurance for firms and individual clients."
       />
       <Intro />
       <Stats />

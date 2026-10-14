@@ -8,7 +8,7 @@ describe("Services", () => {
     expect(screen.getByRole("heading", { level: 2, name: "What services can we offer you?" })).toBeTruthy();
     const cards = screen.getAllByRole("heading", { level: 3 });
     expect(cards.map((c) => c.textContent)).toEqual([
-      "Accounting services - firms and persons",
+      "Accounting services - firms and individual clients",
       "Taxes and insurance",
     ]);
   });

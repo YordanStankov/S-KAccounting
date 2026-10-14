@@ -9,7 +9,7 @@ export default function SiteFooter() {
         <div>
           <h3>{"Services"}</h3>
           <ul>
-            <li>{"Accounting services - firms and persons"}</li>
+            <li>{"Accounting services - firms and individual clients"}</li>
             <li>{"Taxes and insurance"}</li>
           </ul>
         </div>

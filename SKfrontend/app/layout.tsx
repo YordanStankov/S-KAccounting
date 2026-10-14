@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "S and K Accounting",
-  description: "Accounting services, taxes and insurance for firms and persons in Sofia.",
+  description: "Accounting services, taxes and insurance for firms and individual clients in Sofia.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

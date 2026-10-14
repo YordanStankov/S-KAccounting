@@ -13,10 +13,10 @@ export default function Services() {
             <span className={ui.cardIcon}>
               <Calculator size={28} aria-hidden="true" />
             </span>
-            <h3>{"Accounting services - firms and persons"}</h3>
+            <h3>{"Accounting services - firms and individual clients"}</h3>
             <p>
               {
-                "Full accounting service or individual accounting procedures for companies, sole traders and private persons, with ongoing support throughout the year."
+                "Full accounting service or individual accounting procedures for companies, sole traders and individual clients, with ongoing support throughout the year."
               }
             </p>
           </li>
