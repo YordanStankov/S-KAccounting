@@ -19,7 +19,8 @@ describe("About page", () => {
     render(<AboutPage />);
     expect(screen.getByRole("img", { name: "Desk with a calculator, binders, notebook and glasses" })).toBeTruthy();
     const stats = screen.getByRole("region", { name: "S and K Accounting in numbers" });
-    expect(within(stats).getAllByRole("listitem")).toHaveLength(4);
+    expect(within(stats).getAllByRole("listitem")).toHaveLength(3);
+    expect(within(stats).queryByText("core service areas")).toBeNull();
   });
 
   it("renders four values, three steps and a contact link", () => {

@@ -68,10 +68,6 @@ function Stats() {
             <span>{"years in practice"}</span>
           </li>
           <li>
-            <strong>{"2"}</strong>
-            <span>{"core service areas"}</span>
-          </li>
-          <li>
             <strong>{"5"}</strong>
             <span>{"days a week, always reachable"}</span>
           </li>
@@ -117,7 +113,7 @@ function Values() {
               <h3>{"Reliability"}</h3>
               <p>
                 {
-                  "Our reliability is proven through long-standing partnerships with established organizations such as Megatron, Defense, and Isha Asha, who rely on us year after year."
+                  "Our reliability is proven through long-standing partnerships with established organizations such as Megatron, Defense, Isha Asha and Alin, who rely on us year after year."
                 }
               </p>
             </div>

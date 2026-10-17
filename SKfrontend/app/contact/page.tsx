@@ -38,14 +38,19 @@ function ContactDetails() {
             </a>
           </li>
           <li>
-            <div className={styles.tile}>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Hemus+62-64,+Geo+Milev,+Sofia,+Bulgaria"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.tile}
+            >
               <span className={styles.tileIcon}>
                 <MapPin size={26} aria-hidden="true" />
               </span>
               <h3>{"Visit us"}</h3>
               <address className={styles.tileValue}>{"Sofia, Geo Milev, Hemus 62 - 64"}</address>
-              <span className={styles.tileHint}>{"See the map below"}</span>
-            </div>
+              <span className={styles.tileHint}>{"Contact us before a visit"}</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -127,7 +132,7 @@ function OfficeMap() {
     <section className={styles.mapSection} aria-labelledby="map-title">
       <div className={ui.inner}>
         <h2 id="map-title" className={`${ui.sectionTitle} ${styles.mapTitle}`}>
-          {"Our office"}
+          {"Visit our office"}
         </h2>
         <div className={styles.mapWrap}>
           <div className={styles.mapFrame}>

@@ -15,6 +15,9 @@ describe("Contact page", () => {
     expect(screen.getByRole("link", { name: /Call us/ }).getAttribute("href")).toBe("tel:+359881234567");
     expect(screen.getByRole("link", { name: /Email us/ }).getAttribute("href")).toBe("mailto:office@sk-accounting.bg");
     expect(screen.getByRole("heading", { level: 3, name: "Visit us" })).toBeTruthy();
+    const visit = screen.getByRole("link", { name: /Visit us/ });
+    expect(visit.getAttribute("href")).toContain("google.com/maps");
+    expect(visit.getAttribute("target")).toBe("_blank");
     expect(screen.getAllByText("Sofia, Geo Milev, Hemus 62 - 64").length).toBeGreaterThanOrEqual(1);
   });
 
