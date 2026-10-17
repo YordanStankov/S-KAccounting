@@ -9,7 +9,7 @@ interface PageHeroProps {
 export default function PageHero({ title, description }: PageHeroProps) {
   return (
     <section className={styles.pageHero}>
-      <div className={ui.inner}>
+      <div className={`${ui.inner} ${styles.pageHeroInner}`}>
         <h1>{title}</h1>
         <p>{description}</p>
       </div>
