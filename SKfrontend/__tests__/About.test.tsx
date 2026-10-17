@@ -9,4 +9,9 @@ describe("About", () => {
     expect(screen.getByText(/For 25 years we have served/)).toBeTruthy();
     expect(screen.getByRole("link", { name: "Contact us" }).getAttribute("href")).toBe("/contact");
   });
+
+  it("uses the green section theme", () => {
+    const { container } = render(<About />);
+    expect(container.querySelector("section")!.classList.contains("theme-green")).toBe(true);
+  });
 });

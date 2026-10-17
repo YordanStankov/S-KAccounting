@@ -3,7 +3,7 @@
     min-height: 460px;
     background-color: var(--navy-2);
     background-image:
-        linear-gradient(90deg, rgba(20, 35, 60, 0.88) 0%, rgba(20, 35, 60, 0.55) 50%, rgba(20, 35, 60, 0.15) 100%),
+        linear-gradient(90deg, color-mix(in srgb, var(--navy) 70%, transparent) 0%, color-mix(in srgb, var(--navy) 82%, transparent) 50%, color-mix(in srgb, var(--navy) 70%, transparent) 100%),
         url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=2000&q=80");
     background-size: cover;
     background-position: center 40%;
@@ -11,28 +11,42 @@
 
 .heroInner {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     min-height: 460px;
 }
 
 .heroTitle {
-    margin: 0;
-    max-width: 14ch;
-    color: #ffffff;
-    font-size: clamp(2.4rem, 6vw, 4rem);
-    font-weight: 700;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    color: var(--white);
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
+    font-size: clamp(2.6rem, 6.5vw, 4.4rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0;
 }
 
 .heroTitle::after {
     content: "";
     display: block;
-    width: 72px;
+    width: 100%;
     height: 4px;
     margin-top: 1.25rem;
-    background: var(--accent);
+    background: var(--hero-trim);
     border-radius: 2px;
+}
+
+.heroText {
+    max-width: 44rem;
+    margin: 1.5rem auto 0;
+    color: var(--hero-text);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-weight: 500;
+    line-height: 1.6;
 }
 
 .aboutInner {
@@ -50,11 +64,123 @@
 
 .aboutInner p {
     margin: 0;
-    color: var(--muted);
+    color: var(--about-text);
     font-size: 1.05rem;
     line-height: 1.7;
 }
 
 .aboutInner a {
     margin-top: 1rem;
+}
+
+/* Shared bits */
+.sectionLead {
+    max-width: 40rem;
+    margin: -1.5rem auto 2.75rem;
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Partners band */
+.partners {
+    padding: 2.75rem 0;
+    background: var(--navy);
+    text-align: center;
+}
+
+.partnersTitle {
+    margin: 0 0 1.25rem;
+    color: var(--on-dark-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.partnerList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem 3.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.partnerList li {
+    position: relative;
+    color: var(--on-dark-bright);
+    font-family: var(--font-display), Georgia, "Times New Roman", serif;
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 400;
+}
+
+.partnerList li + li::before {
+    content: "";
+    position: absolute;
+    left: -1.95rem;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    transform: translateY(-50%);
+}
+
+/* Client types — fades from white into the light surface */
+.clients {
+    padding: 4.5rem 0;
+    background: linear-gradient(180deg, var(--white) 0%, var(--surface) 10rem);
+}
+
+.clientGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.client {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.75rem 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.client:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+    box-shadow: 0 14px 30px color-mix(in srgb, var(--navy) 8%, transparent);
+}
+
+.clientIcon {
+    display: inline-grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: var(--navy);
+    color: var(--accent);
+}
+
+.client h3 {
+    margin: 0;
+    color: var(--navy);
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.client p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.6;
 }
