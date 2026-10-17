@@ -8,18 +8,18 @@
 
 .section {
     padding: 4.5rem 0;
-    background: #ffffff;
+    background: var(--section-bg);
 }
 
 .sectionAlt {
     padding: 4.5rem 0;
-    background: var(--surface);
-    border-top: 1px solid var(--line);
+    background: var(--section-alt-bg);
+    border-top: 1px solid var(--section-alt-border);
 }
 
 .sectionTitle {
     margin: 0 0 2.5rem;
-    color: var(--navy);
+    color: var(--section-title);
     font-size: clamp(1.6rem, 3vw, 2.1rem);
     font-weight: 700;
     text-align: center;
@@ -39,16 +39,20 @@
     flex-direction: column;
     gap: 0.9rem;
     padding: 2.25rem 2rem;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-top: 4px solid var(--accent);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-top: 4px solid var(--card-trim);
     border-radius: 10px;
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+.card:nth-child(even) {
+    border-top-color: var(--card-trim-alt);
+}
+
 .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 28px rgba(20, 35, 60, 0.1);
+    box-shadow: 0 12px 28px color-mix(in srgb, var(--navy) 10%, transparent);
 }
 
 .card h3 {
@@ -70,8 +74,13 @@
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: var(--navy);
-    color: var(--accent);
+    background: var(--card-icon-bg);
+    color: var(--card-icon-fg);
+}
+
+.card:nth-child(even) .cardIcon {
+    background: var(--card-icon-bg-alt);
+    color: var(--card-icon-fg-alt);
 }
 
 .contactLink {
@@ -99,13 +108,13 @@ a.contactLink:hover {
     height: 3rem;
     padding: 0 2rem;
     border-radius: 6px;
-    background: var(--accent);
-    color: var(--navy);
+    background: var(--button-bg);
+    color: var(--button-fg);
     font-weight: 600;
     text-decoration: none;
     transition: background-color 0.15s ease;
 }
 
 .button:hover {
-    background: var(--accent-dark);
+    background: var(--button-bg-hover);
 }

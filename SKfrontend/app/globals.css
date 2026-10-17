@@ -1,17 +1,83 @@
 @import "tailwindcss";
 
+/*
+ * Site palette — every color used in the app lives here.
+ * Component CSS modules reference these tokens only (no hex/rgba literals).
+ */
 :root {
+  /* Base neutrals */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Brand: navy + amber */
   --navy: #14233c;
   --navy-2: #1d3557;
   --accent: #e2a03f;
   --accent-dark: #c4862a;
+
+  /* Green family */
+  --green-50: #eef4ef;
+  --green-100: #dde9e0;
+  --green-500: #4f8a6a;
+  --green-700: #2f6b4f;
+  --green-800: #23523c;
+
+  /* Cream (header) */
+  --cream: #f8f3e8;
+  --cream-line: #e8dcc4;
+
+  /* Text and lines */
   --text: #1f2933;
   --muted: #5b6776;
   --line: #e3e8ef;
   --surface: #f5f7fa;
 
-  --background: #ffffff;
+  /* Text on dark (navy) backgrounds */
+  --on-dark: #c9d3e0;
+  --on-dark-muted: #8c9bb0;
+  --on-dark-bright: #eef3f9;
+
+  --background: var(--white);
   --foreground: var(--text);
+
+  /* Semantic tokens used by shared UI components (default theme) */
+  --section-bg: var(--white);
+  --section-alt-bg: var(--surface);
+  --section-alt-border: var(--line);
+  --section-title: var(--navy);
+
+  --card-bg: var(--surface);
+  --card-border: var(--line);
+  --card-trim: var(--accent);
+  --card-trim-alt: var(--accent);
+  --card-icon-bg: var(--navy);
+  --card-icon-fg: var(--accent);
+  --card-icon-bg-alt: var(--navy);
+  --card-icon-fg-alt: var(--accent);
+
+  --button-bg: var(--accent);
+  --button-bg-hover: var(--accent-dark);
+  --button-fg: var(--navy);
+
+  --hero-trim: var(--accent);
+  --hero-text: var(--on-dark-bright);
+  --about-text: var(--muted);
+}
+
+/*
+ * Green section theme — applied to the home page About section only
+ * (app/components/home/About.tsx); everything else uses the default theme.
+ */
+.theme-green {
+  /* Soft green that fades in from the light section above (no hard line) */
+  --section-alt-bg: linear-gradient(
+    180deg,
+    var(--surface) 0%,
+    var(--green-50) 6rem,
+    var(--green-100) 14rem
+  );
+  --section-alt-border: transparent;
+  /* Title, text and button use the default navy/amber palette */
 }
 
 @theme inline {
